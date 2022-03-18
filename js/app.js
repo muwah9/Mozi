@@ -1517,17 +1517,14 @@
     const navigation = document.querySelector(".header__navigation");
     const body = document.querySelector("body");
     document.querySelectorAll(".header__link");
-    body.classList.add("lock");
     navigation.classList.remove("header__navigation--no-js");
     menuButton.addEventListener("click", (function() {
         if (navigation.classList.contains("header__navigation--closed")) {
             navigation.classList.remove("header__navigation--closed");
             navigation.classList.add("header__navigation--open");
-            body.classList.add("lock");
         } else {
             navigation.classList.add("header__navigation--closed");
             navigation.classList.remove("header__navigation--open");
-            body.classList.remove("lock");
         }
     }));
     $(".slider").slick({
